@@ -1,10 +1,10 @@
 package com.eclipse.order.transformers;
 
-import com.eclipse.order.dtos.OrderDto;
-import com.eclipse.order.entities.Order;
-
 import java.util.List;
 import java.util.stream.Collectors;
+
+import com.eclipse.order.dtos.OrderDto;
+import com.eclipse.order.entities.Order;
 
 public class OrderTransformer {
 

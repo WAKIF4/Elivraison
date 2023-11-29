@@ -1,6 +1,9 @@
 package com.eclipse.order.dtos;
 
 import com.eclipse.order.enums.OrderStatus;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotEmpty;
 import lombok.AllArgsConstructor;

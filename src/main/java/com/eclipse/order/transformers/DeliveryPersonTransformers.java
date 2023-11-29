@@ -1,10 +1,10 @@
 package com.eclipse.order.transformers;
 
-import com.eclipse.order.dtos.DeliveryPersonDto;
-import com.eclipse.order.entities.DeliveryPerson;
-
 import java.util.List;
 import java.util.stream.Collectors;
+
+import com.eclipse.order.dtos.DeliveryPersonDto;
+import com.eclipse.order.entities.DeliveryPerson;
 
 public class DeliveryPersonTransformers {
         public static DeliveryPerson toEntity(DeliveryPersonDto dto) {
@@ -18,8 +18,6 @@ public class DeliveryPersonTransformers {
                     .build();
             return entity;
         }
-
-
 
         public static DeliveryPersonDto toDto(DeliveryPerson entity) {
             DeliveryPersonDto dto = DeliveryPersonDto.builder()
