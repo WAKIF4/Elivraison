@@ -1,0 +1,90 @@
+API Documentation For Delivery Person
+1. Get All Delivery Persons
+•	Endpoint: /api/v1/delivery-persons
+•	Method: GET
+•	Response: List of DeliveryPersonDto
+2. Get Delivery Person by ID
+•	Endpoint: /api/v1/delivery-persons/{id}
+•	Method: GET
+•	Path Variable:
+•	id (Long) - ID of the delivery person
+•	Response: DeliveryPersonDto
+3. Update Delivery Person
+•	Endpoint: /api/v1/delivery-persons/{id}
+•	Method: POST
+•	Path Variable:
+•	id (Long) - ID of the delivery person
+•	Request Body: DeliveryPersonDto (JSON)
+•	Response: Updated DeliveryPersonDto
+4. Delete Delivery Person
+•	Endpoint: /api/v1/delivery-persons/{id}
+•	Method: DELETE
+•	Path Variable:
+•	id (Long) - ID of the delivery person
+•	Response: String (Success Message)
+5. Create Delivery Person
+•	Endpoint: /api/v1/delivery-persons
+•	Method: POST
+•	Request Body: DeliveryPersonDto (JSON)
+•	Response: Created DeliveryPersonDto
+6. Get Delivery Person Orders
+•	Endpoint: /api/v1/delivery-persons/{id}/orders
+•	Method: GET
+•	Path Variable:
+•	id (Long) - ID of the delivery person
+•	Response: List of OrderDto
+Sample JSON for Testing
+1.	Create Delivery Person:
+•	Request Body:
+jsonCopy code
+{ "id": null, "fullname": "John Doe", "email": "john.doe@example.com", "phone": "123-456-7890", "city": "Anytown"} 
+2.	Update Delivery Person:
+•	Request Body:
+jsonCopy code
+{ "id": null, "fullname": "Updated Name", "email": "updated.email@example.com", "phone": "987-654-3210", "city": "New City" } 
+3.	Note: Adjust the values based on your actual data model and requirements.
+
+
+ 
+
+JMS Receiver Documentation
+Receive and Process JMS Message
+•	Queue: CommandeQueues
+
+{
+  "id": null,
+  "totalPaye": 50.0,
+  "client": "John Doe",
+  "commandItems": "Item1, Item2"
+}
+API Documentation For Order
+1. Get All Orders
+•	Endpoint: /api/v1/orders
+•	Method: GET
+•	Response: List of OrderDto
+2. Get Order by ID
+•	Endpoint: /api/v1/orders/{id}
+•	Method: GET
+•	Path Variable:
+•	id (Long) - ID of the order
+•	Response: OrderDto
+3. Update Order Status
+•	Endpoint: /api/v1/orders/{id}
+•	Method: POST
+•	Path Variable:
+•	id (Long) - ID of the order
+•	Response: Updated OrderDto
+4. Delete Order
+•	Endpoint: /api/v1/orders/{id}
+•	Method: DELETE
+•	Path Variable:
+•	id (Long) - ID of the order
+•	Response: String (Success Message)
+5. Add Delivery Person to Order
+•	Endpoint: /api/v1/orders/{deliveryPersonId}/{id}
+•	Method: PUT
+•	Path Variables:
+•	id (Long) - ID of the order
+•	deliveryPersonId (Long) - ID of the delivery person
+•	Response: Updated OrderDto
+
