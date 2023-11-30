@@ -1,0 +1,67 @@
+### DeliveryPersonController Endpoints
+
+# Get All Delivery Persons
+GET http://localhost:8080/api/v1/delivery-persons
+
+# Get Delivery Person by ID
+GET http://localhost:8080/api/v1/delivery-persons/1
+
+# Update Delivery Person
+POST http://localhost:8080/api/v1/delivery-persons/1
+Content-Type: application/json
+
+{
+  "id": null,
+  "fullname": "Updated Name",
+  "email": "updated.email@example.com",
+  "phone": "987-654-3210",
+  "city": "New City"
+}
+
+# Delete Delivery Person
+DELETE http://localhost:8080/api/v1/delivery-persons/1
+
+# Create Delivery Person
+POST http://localhost:8080/api/v1/delivery-persons
+Content-Type: application/json
+
+{
+  "id": null,
+  "fullname": "John Doe",
+  "email": "john.doe@example.com",
+  "phone": "123-456-7890",
+  "city": "Anytown",
+  "status": "AVAILABLE"
+}
+
+# Get Delivery Person Orders
+GET http://localhost:8080/api/v1/delivery-persons/1/orders
+
+### OrderController Endpoints
+
+# Get All Orders
+GET http://localhost:8080/api/v1/orders
+
+# Get Order by ID
+GET http://localhost:8080/api/v1/orders/1
+
+# Update Order Status
+POST http://localhost:8080/api/v1/orders/1
+
+# Add Delivery Person to Order
+PUT http://localhost:8080/api/v1/orders/1/1
+
+
+# Delete Order
+DELETE http://localhost:8080/api/v1/orders/1
+
+
+### OrderReceiver JMS Endpoint
+
+# Example JSON Message for JMS
+{
+  "id": null,
+  "totalPaye": 50.0,
+  "client": "John Doe",
+  "commandItems": "Item1, Item2",
+}
